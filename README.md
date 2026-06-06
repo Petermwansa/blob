@@ -37,4 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 ## DEVELOPMENT PROCESS
-We create the app using the `npx create-next-app@latest`# blob
+We create the app using the `npx create-next-app@latest`
+
+Handle the registration on the frontend and use zod for the data validation
+
+We then set up the database by creating a client and using the validated data to login and redirect to the dashboard 
