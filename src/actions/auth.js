@@ -51,8 +51,6 @@ export const register = async (state, formData) => {
 };
 
 
-
-
 export async function login(state, formData) {
   // Validate form fields
   const validatedFields = LoginFormSchema.safeParse({
@@ -92,9 +90,9 @@ export async function login(state, formData) {
 }
 
 
-
 export const logout = async () => {
   const cookieStore = await cookies();
   cookieStore.delete('session');
   redirect('/');
 }
+

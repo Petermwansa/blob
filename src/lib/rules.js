@@ -1,7 +1,5 @@
 import { z } from "zod";
 
-
-
 export const LoginFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email." }).trim(),
   password: z.string().min(1, { message: "Password is required." }).trim(),
@@ -31,3 +29,16 @@ export const RegisterFormSchema = z
       });
     }
   });
+
+export const BlogPostSchema = z.object({
+  title: z
+    .string()
+    .min(1, { message: "The title field is required" })
+    .max(100, { message: "The title cannot be more than 100 characters" })
+    .trim(),
+
+  content: z
+    .string()
+    .min(1, { message: "The content field is required" })
+    .trim(),
+});
