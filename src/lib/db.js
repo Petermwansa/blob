@@ -1,3 +1,5 @@
+import "server-only";
+
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 if (!process.env.DB_URI) {
@@ -28,6 +30,5 @@ export const getCollection = async (collectionName) => {
     if (db) {
         return db.collection(collectionName)
     }
-
     return null;
 }

@@ -1,25 +1,29 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import NavLink from "@/components/NavLink";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body className="">
+      <body className={poppins.className}>
         <header>
-        <nav>
-          <Link className="nav-link" href='/'>Home</Link>
-          <div>
-            <Link className="nav-link" href='/register'>Register</Link>
-            <Link className="nav-link" href='/dashboard'>Dashboard</Link>
-          </div>
-        </nav>
+        <Navigation />
         </header>
 
         <main>{children}</main>
 
-        <footer>Footer</footer>
+        <Footer />
       </body>
     </html>
   );
-};
+}

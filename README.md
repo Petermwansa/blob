@@ -41,4 +41,7 @@ We create the app using the `npx create-next-app@latest`
 
 Handle the registration on the frontend and use zod for the data validation
 
-We then set up the database by creating a client and using the validated data to login and redirect to the dashboard 
+We then set up the database by creating a client and using the validated data to login and redirect to the dashboard
+
+Handle the sessions using `jose` a third party that handle jwt tokens and encryptions,
+

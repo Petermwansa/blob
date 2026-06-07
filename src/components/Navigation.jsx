@@ -1,0 +1,17 @@
+import React from "react";
+import NavLink from "./NavLink";
+
+function Navigation() {
+  return (
+    <nav>
+      <NavLink label="Home" href="/" />
+      <div>
+        <NavLink label="Register" href="/register" />
+        <NavLink label="Login" href="/login" />
+        <NavLink label="Dashboard" href="/dashboard" />
+      </div>
+    </nav>
+  );
+}
+
+export default Navigation;
