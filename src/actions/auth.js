@@ -5,6 +5,7 @@ import { getCollection } from "@/lib/db";
 import { LoginFormSchema, RegisterFormSchema } from "@/lib/rules";
 import { redirect } from 'next/navigation';
 import { createSession } from '@/lib/sessions';
+import { cookies } from 'next/headers';
 
 export const register = async (state, formData) => {
   // here we validate the form fields
@@ -88,4 +89,12 @@ export async function login(state, formData) {
   
   // Redirect
   redirect('/dashboard')
+}
+
+
+
+export const logout = async () => {
+  const cookieStore = await cookies();
+  cookieStore.delete('session');
+  redirect('/');
 }
