@@ -15,6 +15,7 @@ export const register = async (state, formData) => {
     confirmPassword: formData.get("confirmPassword"),
   });
 
+
   // we check if any form fields are invalid
   if (!validatedFields.success) {
     return {
@@ -47,7 +48,7 @@ export const register = async (state, formData) => {
   await createSession(results.insertedId)
 
   // we redirect to the dashboard 
-  redirect('/dashboard');
+  redirect('/');
 };
 
 

@@ -49,5 +49,7 @@ Handle the create and edit crud operartions.
 
 Implement the deletion of posts by the creator functionality and use the revalidatePath from next/cache to reload the current state of the page  
 
+Impletement safety by adding the middleware to protect the routes
+
 
 
