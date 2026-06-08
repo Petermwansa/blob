@@ -47,6 +47,7 @@ Handle the sessions using `jose` a third party that handle jwt tokens and encryp
 
 Handle the create and edit crud operartions.
 
+Implement the deletion of posts by the creator functionality and use the revalidatePath from next/cache to reload the current state of the page  
 
 
 
