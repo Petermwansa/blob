@@ -45,3 +45,8 @@ We then set up the database by creating a client and using the validated data to
 
 Handle the sessions using `jose` a third party that handle jwt tokens and encryptions,
 
+Handle the create and edit crud operartions.
+
+
+
+
